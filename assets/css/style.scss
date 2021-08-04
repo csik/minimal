@@ -1,10 +1,12 @@
 ---
 ---
 
+@import "{{ site.theme }}";
+
+
 section {
     width: 650px;
     float: right;
     padding-bottom: 50px;
 }
 
-@import "{{ site.theme }}";
