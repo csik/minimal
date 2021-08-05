@@ -22,20 +22,13 @@
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
         
-        
-        <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/schedule">Schedule</a></p>
-        <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/assignments">Assignments</a></p>
-        <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/course_policies">Course policies</a></p>
-        <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/texts">Texts</a></p>
-        <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/copyright">Copyright</a></p>
         
          {% for node in site.data.nav.pages %}
             {% if page.title == node.name %}
-               <li class="active"><a href="{{node.url}}" class="active"><b>{{node.name}}</b></a></li>
+               <a href="{{node.url}}" class="active"><b>{{node.name}}</b></a>
             {% else %}
-               <li><a href="{{node.url}}">{{node.name}}</a></li>
+               <a href="{{node.url}}">{{node.name}}</a>
             {% endif %}
         {% endfor %}
      
