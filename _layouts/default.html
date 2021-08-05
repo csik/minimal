@@ -30,6 +30,14 @@
         <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/course_policies">Course policies</a></p>
         <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/texts">Texts</a></p>
         <p class="view"><a href="{{ site.url }}{{ site.baseurl }}/copyright">Copyright</a></p>
+        
+         {% for node in site.data.nav.pages %}
+            {% if page.title == node.name %}
+               <li class="active"><a href="{{node.url}}" class="active"><b>{{node.name}}</b></a></li>
+            {% else %}
+               <li><a href="{{node.url}}">{{node.name}}</a></li>
+            {% endif %}
+        {% endfor %}
      
         
 
