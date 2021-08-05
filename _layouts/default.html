@@ -25,11 +25,13 @@
         
         
          {% for node in site.data.nav.pages %}
+            <p>
             {% if page.title == node.name %}
                <a href="{{node.url}}" class="active"><b>{{node.name}}</b></a>
             {% else %}
                <a href="{{node.url}}">{{node.name}}</a>
             {% endif %}
+            </p>
         {% endfor %}
      
         
